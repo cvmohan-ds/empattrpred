@@ -1,0 +1,60 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+hr_data_recieved:
+  type: pandas.CSVDataSet
+  filepath: C:/Users/cvmda/code/data/ds/WA_Fn-UseC_-HR-Employee-Attrition.csv
+
+scrubbed_data:
+  type: pandas.CSVDataSet
+  filepath: data/02_intermediate/scrubbed_data.csv
+
+X_scaled:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/X_scaled.csv
+
+Y:
+  type: pandas.CSVDataSet
+  filepath: data/03_primary/Y.csv
+
+x_train:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/train_x.csv
+
+x_test:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/test_x.csv
+
+y_train:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/train_y.csv
+
+y_test:
+  type: pandas.CSVDataSet
+  filepath: data/05_model_input/test_y.csv
+
+ml_model:
+  type: pickle.PickleDataSet
+  filepath: data/06_models/ml_model.pkl
+  backend: pickle
+
+predictions:
+  type: pandas.CSVDataSet
+  filepath: data/07_model_output/predictions.csv
+
+train_evaluation:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/train_plots.png
+
+test_evaluation:
+  type: matplotlib.MatplotlibWriter
+  filepath: data/08_reporting/test_plot.png
+
+train_classification_report:
+  type: pandas.ExcelDataSet
+  filepath: data/08_reporting/train_report.xlsx
+
+test_classifcation_report:
+  type: pandas.ExcelDataSet
+  filepath: data/08_reporting/test_report.xlsx

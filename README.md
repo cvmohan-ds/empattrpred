@@ -2,15 +2,15 @@
 
 ## Overview
 
-This is your new Kedro project, which was generated using `kedro 0.18.14`.
+This is a Kedro project, which was generated using `kedro` and `prefect`.
 
 Take a look at the [Kedro documentation](https://docs.kedro.org) to get started.
 
 ## Rules and guidelines
 
-In order to get the best out of the template:
+In order to get the best out of this project:
 
-* Don't remove any lines from the `.gitignore` file we provide
+* Don't remove any lines from the `.gitignore` file  provide
 * Make sure your results can be reproduced by following a data engineering convention
 * Don't commit data to your repository
 * Don't commit any credentials or your local configuration to your repository. Keep all your credentials and local configuration in `conf/local/`
